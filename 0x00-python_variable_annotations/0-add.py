@@ -2,6 +2,6 @@
 """add annotated module"""
 
 
-def add(a: float, b: float):
+def add(a: float, b: float) -> float:
     """the add function"""
-    return a+b
+    return a + b
