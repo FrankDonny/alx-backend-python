@@ -67,15 +67,4 @@ def memoize(fn: Callable) -> Callable:
             setattr(self, attr_name, fn(self))
         return getattr(self, attr_name)
 
-    return memoized
-
-
-# mp = {}
-# seq = ("a",)
-# print(access_nested_map(mp, seq))
-# mp = {}
-# seq = ("a",)
-# mp1 = {"a": 1}
-# seq1 = ("a", "b")
-# print(f"first: {access_nested_map(mp, seq)}")
-# print(f"second: {access_nested_map(mp1, seq1)}")
+    return property(memoized)
